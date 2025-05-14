@@ -1,0 +1,147 @@
+/* Fuente moderna */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #d3d3d3; /* Plata claro */
+  color: #333;
+}
+
+header {
+  background: linear-gradient(135deg, #00bfff, #009acd); /* Degradado celeste */
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header .header-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .logo {
+  width: 250px;
+  height: auto;
+}
+
+header .header-info {
+  text-align: center;
+  margin-top: 10px;
+}
+
+header .header-info h1 {
+  margin: 0;
+  font-size: 2.8rem;
+}
+
+header .header-info p {
+  font-size: 1.2rem;
+}
+
+.foto-container {
+  margin-top: 10px;
+}
+
+.foto {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+/* ===== Contenedor de columnas ===== */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+  gap: 2rem; /* Espacio entre las columnas */
+  margin-top: 2rem;
+}
+
+.column {
+  padding: 1rem;
+}
+
+main {
+  background-color: white;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+  color: #00bfff;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  border-left: 5px solid #00bfff;
+  padding-left: 10px;
+}
+
+ul {
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #00bfff;
+  color: white;
+  margin-top: 2rem;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Tecnologías y Herramientas - Grid de íconos ===== */
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 2%;
+  justify-items: center;
+  align-items: center;
+  padding: 2%;
+  background-color: #ccc; /* Plata */
+  border-radius: 10px;
+  margin-top: 1.5rem;
+}
+
+.icon-grid img {
+  width: 60%; /* Escala relativa a su celda */
+  height: auto;
+  opacity: 0.9;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.icon-grid img:hover {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+  }
+}

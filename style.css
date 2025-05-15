@@ -1,4 +1,3 @@
-/* Fuente moderna */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 *,
@@ -11,12 +10,12 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #d3d3d3; /* Plata claro */
+  background-color: #f5f5f5;
   color: #333;
 }
 
 header {
-  background: linear-gradient(135deg, #00bfff, #009acd); /* Degradado celeste */
+  background: linear-gradient(135deg, #4B0082, #6A0DAD);
   color: white;
   text-align: center;
   padding: 2rem;
@@ -25,29 +24,29 @@ header {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-header .header-logo {
+.header-logo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-header .logo {
+.logo {
   width: 250px;
-  height: auto;
 }
 
-header .header-info {
-  text-align: center;
-  margin-top: 10px;
-}
-
-header .header-info h1 {
-  margin: 0;
+.header-info h1 {
   font-size: 2.8rem;
+  margin: 0;
 }
 
-header .header-info p {
+.subtitulo {
   font-size: 1.2rem;
+  color: #ffb6c1;
+}
+
+.titulo-profesion,
+.nombre {
+  color: #ffffff;
 }
 
 .foto-container {
@@ -59,14 +58,13 @@ header .header-info p {
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #fff;
+  border: 2px solid #6A0DAD;
 }
 
-/* ===== Contenedor de columnas ===== */
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
-  gap: 2rem; /* Espacio entre las columnas */
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
   margin-top: 2rem;
 }
 
@@ -75,7 +73,7 @@ header .header-info p {
 }
 
 main {
-  background-color: white;
+  background: white;
   max-width: 1000px;
   margin: 2rem auto;
   padding: 2rem;
@@ -84,11 +82,10 @@ main {
 }
 
 h2 {
-  color: #00bfff;
-  font-size: 1.5rem;
-  margin-top: 2rem;
-  border-left: 5px solid #00bfff;
+  color: #6A0DAD;
+  border-left: 5px solid #6A0DAD;
   padding-left: 10px;
+  font-size: 1.5rem;
 }
 
 ul {
@@ -107,7 +104,7 @@ section {
 footer {
   text-align: center;
   padding: 1rem;
-  background-color: #00bfff;
+  background-color: #4B0082;
   color: white;
   margin-top: 2rem;
   border-top-left-radius: 15px;
@@ -115,33 +112,57 @@ footer {
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* ===== Tecnologías y Herramientas - Grid de íconos ===== */
-.icon-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 2%;
-  justify-items: center;
-  align-items: center;
-  padding: 2%;
-  background-color: #ccc; /* Plata */
-  border-radius: 10px;
-  margin-top: 1.5rem;
+/* Scroll animation */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
 }
 
-.icon-grid img {
-  width: 60%; /* Escala relativa a su celda */
-  height: auto;
-  opacity: 0.9;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.icon-grid img:hover {
-  transform: scale(1.15);
+.animate-on-scroll.visible {
   opacity: 1;
+  transform: translateY(0);
+}
+
+/* Carrusel de iconos */
+.icon-carousel {
+  overflow: hidden;
+  width: 100%;
+  background-color: #eae0f4;
+  border-radius: 10px;
+  padding: 1rem 0;
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  animation: scrollCarousel 20s linear infinite;
+  gap: 20px;
+  align-items: center;
+}
+
+.carousel-track img {
+  width: 80px;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.carousel-track img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes scrollCarousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 @media (max-width: 768px) {
   .container {
-    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    grid-template-columns: 1fr;
   }
 }

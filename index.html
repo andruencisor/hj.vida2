@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Widget de traducción de Google -->
+  <div id="google_translate_element" style="position: fixed; top: 10px; right: 10px; z-index: 1000;"></div>
+
   <header class="header">
     <div class="header-logo">
       <img src="img/logo.png" alt="Logo" class="logo" />
@@ -33,7 +36,7 @@
             <li><strong>Nombre:</strong> Andrés Felipe Enciso Rincón</li>
             <li><strong>Email:</strong> andruencisor@gmail.com</li>
             <li><strong>Ubicación:</strong> Bogotá, Colombia</li>
-            <li><strong>Educación:</strong> Tecnólogo en Gestión de Redes de Datos (SENA),curso de redes (CISCO) Bachiller Técnico en Ventas (Colegio Enrique Olaya Herrera)</li>
+            <li><strong>Educación:</strong> Tecnólogo en Gestión de Redes de Datos (SENA), curso de redes (CISCO) Bachiller Técnico en Ventas (Colegio Enrique Olaya Herrera)</li>
           </ul>
         </section>
 
@@ -104,5 +107,22 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <!-- Script de Google Translate -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: 'es',
+          includedLanguages: 'en,fr,de,it,pt,ja,zh-CN,ru',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        },
+        'google_translate_element'
+      );
+    }
+  </script>
+  <script type="text/javascript" 
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+  </script>
 </body>
 </html>
